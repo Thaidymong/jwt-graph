@@ -1,0 +1,33 @@
+scalar JSON
+scalar JSONObject
+scalar Upload
+
+type Query {
+  testList: [String]
+  testDetail(id: Int!): String
+}
+
+type Ok {
+  ok: Boolean
+}
+
+type Mutation {
+  createTest(input: TestInput): Int!
+  updateTest(id: Int!, input: TestInput): Boolean
+}
+
+input TestInput {
+  message: String
+}
+
+input PaginationInput {
+  page: Int
+  size: Int
+}
+
+type Pagination {
+  total: Int
+  size: Int
+  current: Int
+}
+

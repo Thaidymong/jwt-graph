@@ -1,0 +1,12 @@
+extend type Mutation {
+  appCreateUser(input: UserInput): Ok
+}
+
+input UserInput {
+  fullname: String
+  email: String
+  password: String
+  phone_number: String
+  user_profile: String
+}
+
